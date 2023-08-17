@@ -1,0 +1,3 @@
+:: This file will try to install Python [3.11.4]
+powershell -command "(New-Object Net.WebClient).DownloadFile('https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe', 'C:/Programs/python-3.11.4.exe'); & c:\Programs\python-3.11.4.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 TargetDir=c:\Programs\Python311; [Environment]::SetEnvironmentVariable('PATH', ${env:path} + ';C:\Programs\Python311', 'Machine')"
+pause
